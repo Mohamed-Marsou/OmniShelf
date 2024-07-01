@@ -30,8 +30,7 @@ OmniShelf is a comprehensive web application designed to be a one-stop library f
 - **Frontend:**
   - React.js
 - **Backend:**
-  - Node.js
-  - Express.js
+  - Laravel
 - **Database:**
   - MongoDB
 
