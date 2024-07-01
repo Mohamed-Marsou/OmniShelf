@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background: #1b1a1a;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 8%;
+}
+nav h1 {
+  font-family: "Playwrite GB S", cursive;
+}
+nav .container {
+  display: flex;
+  gap: 1rem;
+}
+nav .container .box {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 5px;
+  background: #3a3939;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  color: #afa3a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-transform: capitalize;
+}
+nav .container .box span {
+  color: #fff;
+  font-weight: bold;
+}
+nav .container .box > img {
+  width: 2rem;
+  height: 2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main {
+  width: 84%;
+  min-height: 90vh;
+  margin: 1rem auto;
+}
+main .form {
+  width: 100%;
+  height: 85vh;
+  margin: 1rem 0;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+main .form h2 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #afa3a3;
+}
+main .form h2 span {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+}
+main .form form {
+  width: 45%;
+  height: 3.5rem;
+  background: #3a3939;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+  gap: 5px;
+}
+main .form form > input {
+  background: #3a3939;
+  border: none;
+  outline: none;
+  padding-left: 1rem;
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  border-radius: 5px 0 0 5px;
+}
+main .form form > button {
+  width: 20%;
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+main .form > img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .form p {
+  font-size: 0.9rem;
+}
+main .features {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid red;
+}
+
+footer {
+  width: 84%;
+  height: 4rem;
+  border: 1px solid red;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

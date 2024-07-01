@@ -1,0 +1,128 @@
+@import "variables";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: $fontColor;
+}
+body {
+    background: $mainBgColor;
+    color: $fontColor;
+    font-family: $mainFont;
+}
+
+nav {
+    width: 100%;
+    height: 6rem;
+    @include flex($jc: space-between);
+    padding: 0 8%;
+    h1 {
+        font-family: $logoFont;
+    }
+
+    .container {
+        display: flex;
+        gap: 1rem;
+
+        .box {
+            width: 10rem;
+            height: 4rem;
+            border-radius: 5px;
+            background: #3a3939;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            color: #afa3a3;
+            @include flex($jc: space-between);
+            text-transform: capitalize;
+            span {
+                color: $fontColor;
+                font-weight: bold;
+            }
+            > img {
+                width: 2rem;
+                height: 2rem;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+main {
+    width: 84%;
+    min-height: 90vh;
+    margin: 1rem auto;
+    .form {
+        width: 100%;
+        height: 85vh;
+        margin: 1rem 0;
+        border: 1px solid red;
+        @include flex();
+        flex-direction: column;
+        text-align: center;
+        h2{
+            font-weight: normal;
+            font-size: 1.2rem;
+            color: #afa3a3;
+            span {
+                display: flex;
+                justify-content: center;
+                padding: 1rem;
+                font-weight: bold;
+                font-size: 2rem;
+                color: $fontColor;
+            }
+        }
+        form{
+            width: 45%;
+            height: 3.5rem;
+            background: #3a3939;
+            @include flex();
+            border-radius: 5px;
+            gap: 5px;
+            >input{
+                background: #3a3939;
+                border: none;
+                outline: none;
+                padding-left: 1rem;
+                color: $fontColor;
+                height: 100%;
+                width: 80%;
+                border-radius: 5px 0 0 5px ;
+
+            }
+            >button{
+                width: 20%;
+                height: 3rem;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+        }
+        >img{
+            width: 50%;
+            object-fit: contain;
+        }
+        p{
+            font-size: .9rem;
+        }
+    }
+
+
+    .features{
+        width: 100%;
+        height: 85vh;
+        border: 1px solid red;
+    }
+}
+
+footer{
+    width: 84%;
+    height: 4rem;
+    border: 1px solid red;
+    margin: 0 auto;
+}
