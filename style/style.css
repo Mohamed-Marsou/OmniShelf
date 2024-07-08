@@ -35,10 +35,10 @@ nav .container {
 }
 nav .container .box {
   width: 10rem;
-  height: 4rem;
+  height: 3.3rem;
   border-radius: 5px;
   background: #3a3939;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding: 5px 10px;
   color: #afa3a3;
   display: flex;
@@ -46,14 +46,15 @@ nav .container .box {
   align-items: center;
   gap: 1rem;
   text-transform: capitalize;
+  line-height: 20px;
 }
 nav .container .box span {
   color: #fff;
   font-weight: bold;
 }
 nav .container .box > img {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -62,6 +63,7 @@ main {
   width: 84%;
   min-height: 90vh;
   margin: 1rem auto;
+  position: relative;
 }
 main .form {
   width: 100%;
@@ -73,6 +75,7 @@ main .form {
   gap: 1rem;
   flex-direction: column;
   text-align: center;
+  position: relative;
 }
 main .form h2 {
   font-weight: normal;
@@ -124,6 +127,37 @@ main .form > img {
 main .form p {
   font-size: 0.9rem;
 }
+main .form .blub {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 35vw;
+  height: 35vw;
+  transform: translate(-50%, 50%);
+  border-radius: 60%;
+  z-index: -1;
+  filter: blur(100px);
+  opacity: 0.3;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  animation: upDown 10s infinite ease-in-out;
+}
+@keyframes upDown {
+  0% {
+    transform: translate(-50%, 50%) scale(1.1);
+  }
+  25% {
+    transform: translate(-50%, 50%) scale(1.15);
+  }
+  50% {
+    transform: translate(-50%, 50%) scale(1.2);
+  }
+  75% {
+    transform: translate(-50%, 50%) scale(1.15);
+  }
+  100% {
+    transform: translate(-50%, 50%) scale(1);
+  }
+}
 main .features {
   width: 100%;
   min-height: -moz-fit-content;
@@ -133,7 +167,7 @@ main .features {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  overflow-X: hidden;
+  overflow-x: hidden;
 }
 main .features > div {
   width: 25rem;
@@ -195,4 +229,183 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .form form {
+    width: 80% !important;
+  }
+  .form > img {
+    width: 70% !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav h1 {
+    font-family: "Playwrite GB S", cursive;
+    font-size: 1.2rem;
+  }
+  nav .container {
+    display: flex;
+    gap: 1rem;
+  }
+  nav .container .box {
+    width: 10rem;
+    height: 3.3rem;
+    border-radius: 5px;
+    background: #3a3939;
+    font-size: 0.9rem;
+    padding: 5px 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1rem 0;
+    border-bottom: 1px solid #797777;
+  }
+  nav h1 {
+    font-family: "Playwrite GB S", cursive;
+    font-size: 2rem;
+  }
+  nav .container {
+    display: flex;
+    gap: 1rem;
+  }
+  nav .container .box {
+    width: 10rem;
+    height: 3.1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 5px 5px;
+  }
+  .form {
+    width: 100% !important;
+    height: 80vh !important;
+  }
+  .form h2 {
+    font-size: 1rem !important;
+  }
+  .form h2 span {
+    font-size: 2.5rem !important;
+  }
+  .form form {
+    width: 90% !important;
+  }
+  .form > img {
+    width: 100% !important;
+  }
+  .form p {
+    font-size: 0.9rem;
+  }
+  .form .blub {
+    width: 55vw !important;
+    height: 55vw !important;
+    filter: blur(60px) !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    width: 98% !important;
+  }
+  .form {
+    width: 100% !important;
+    height: 80vh !important;
+    margin: 1rem 0 !important;
+  }
+  .form h2 {
+    font-size: 0.8rem !important;
+    padding: 0 2rem;
+  }
+  .form h2 span {
+    font-size: 2rem !important;
+  }
+  .form form {
+    width: 90% !important;
+  }
+  .form > img {
+    width: 100% !important;
+  }
+  .form p {
+    font-size: 0.9rem;
+  }
+  .form .blub {
+    bottom: 60% !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  nav {
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1.5rem 0;
+  }
+  nav h1 {
+    font-family: "Playwrite GB S", cursive;
+    font-size: 1.8rem;
+  }
+  nav .container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  nav .container .box {
+    width: 45%;
+    height: 3.5rem !important;
+    text-align: center;
+    border-radius: 5px;
+    background: #3a3939;
+    font-size: 0.8rem;
+    padding: 5px 5px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .form {
+    width: 100% !important;
+    height: 80vh !important;
+    margin: 1rem 0 !important;
+  }
+  .form h2 {
+    font-size: 0.8rem !important;
+    padding: 0 1rem !important;
+  }
+  .form h2 span {
+    font-size: 1.7rem !important;
+    padding: 1rem 0 !important;
+  }
+  .form form {
+    width: 95% !important;
+    height: 3rem !important;
+  }
+  .form form > input {
+    width: 70% !important;
+  }
+  .form form > button {
+    width: 30% !important;
+  }
+  .form > img {
+    width: 95% !important;
+  }
+  .form p {
+    font-size: 0.9rem;
+  }
+  .form .blub {
+    bottom: 60% !important;
+  }
+  footer {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.8em;
+    background: #474747;
+    margin-top: 2rem;
+    width: 100% !important;
+    margin: 2rem auto 0 auto;
+  }
+  footer #cr {
+    font-size: 1rem !important;
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
