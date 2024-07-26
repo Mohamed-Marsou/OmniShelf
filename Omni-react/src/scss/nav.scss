@@ -1,6 +1,233 @@
+@import "./var.scss";
 
-nav{
+nav {
+   
     width: 100%;
     height: 6rem;
-    border: 1px solid red;
+    display: flex;
+    .form_wrapper {
+        width: 40%;
+        height: 100%;
+        @include flex();
+
+        > form {
+            width: 65%;
+            height: 3rem;
+            display: flex;
+            background: $secBgColor;
+            border-radius: 10px;
+            > input {
+                width: 83%;
+                background: transparent;
+                color: $fontColor;
+                padding: 0 1rem;
+                border: none;
+                outline: none;
+            }
+            > button {
+                width: 15%;
+                border-radius: 10px;
+                background: $btnColor;
+                border: none;
+                cursor: pointer;
+                > img {
+                    width: 80%;
+                    height: 80%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .profile_wrapper {
+        width: 60%;
+        height: 100%;
+        @include flex($g: 0);
+
+        > .level_box {
+            width: 70%;
+            height: 100%;
+            @include flex($jc: flex-end, $g: 0);
+            cursor: pointer;
+            padding: 0 1rem;
+            > img {
+                width: 4.5rem;
+                height: 4.5rem;
+              
+            }
+
+            .level-progress {
+                width: 12rem;
+                height: 0.7rem;
+                border-radius: 10px;
+                background: rgb(131, 58, 180);
+                background: linear-gradient(
+                    90deg,
+                    rgba(131, 58, 180, 1) 0%,
+                    rgba(253, 29, 29, 1) 50%,
+                    rgba(252, 176, 69, 1) 100%
+                );
+            }
+        }
+        > .user {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            > div {
+                width: 30%;
+                height: 100%;
+                padding: 0 0.5rem;
+                @include flex($jc:flex-end,$g: 0);
+
+                .n-w{
+                    position: relative;
+
+                  .n-counter{
+                    position: absolute;
+                    bottom: -7px;
+                    right: -12px;
+                    background: $btnColor;
+                    border-radius: 50%;
+                    padding:2px 6px;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  }
+                }
+
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    background: $secBgColor;
+                    border-radius: 60%;
+                    padding: 5px;
+                    cursor: pointer;
+                }
+            }
+
+            .mobile-search-btn {
+                display: none;
+                img {
+                    background: $btnColor !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    nav {
+        .form_wrapper {
+            > form {
+                width: 80%;
+                height: 2.5rem;
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    nav {
+        .form_wrapper {
+            display: none;
+        }
+        .profile_wrapper {
+            width: 100%;
+            > .level_box {
+                > img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            > .user {
+                > div {
+                    img {
+                        width: 2.3rem;
+                        height: 2.3rem;
+                    }
+                }
+                .mobile-search-btn {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        .form_wrapper {
+            display: none;
+        }
+        .profile_wrapper {
+            width: 100%;
+            > .level_box {
+                width: 50%;
+                > img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            > .user {
+                width: 50%;
+                justify-content: flex-end;
+                > div {
+                    width: 30%;
+                    img {
+                        width: 2.3rem;
+                        height: 2.3rem;
+                    }
+                }
+                .mobile-search-btn {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@media (max-width:550px) {
+    nav {
+        
+        .form_wrapper {
+            display: none;
+        }
+        .profile_wrapper {
+            width: 100%;
+            justify-content: flex-end;
+            > .level_box {
+                width: 20%;
+
+                .level-progress{
+                    display: none;
+                }
+                
+            }
+            > .user {
+                > div {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+@media (max-width:400px) {
+    nav {
+        
+        .form_wrapper {
+            display: none;
+        }
+        .profile_wrapper {
+            width: 100%;
+            justify-content: flex-end;
+            > .level_box {
+                width: 30%;
+
+                .level-progress{
+                    display: none;
+                }
+                
+            }
+            > .user {
+                > div {
+                    width: 50%;
+                }
+            }
+        }
+    }
 }

@@ -2,7 +2,8 @@
 aside{
     width: 15%;
     height: 100vh;
-    border: 1px solid red;
+    border-left: 1px srgb(0, 140, 255)d rgb(0, 255, 106);
+    border-right: 1px solid rgb(0, 60, 255);
     @include flex();
     flex-direction: column;
     background: $secBgColor;
