@@ -1,9 +1,96 @@
-
-main{
-    width: 100%;
+@import "./var.scss";
+main::-webkit-scrollbar {
+    display: none;
+}
+main {
+    width: calc(100% + 6rem);
     height: 100vh;
-    border-left: 1px solid rgb(0, 255, 106);
-    border-right: 1px solid rgb(0, 255, 106);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
-  
+    .swiperContainer {
+        width: 100%;
+        height: 75vh;
+        @include flex($g: 2rem);
+        flex-wrap: wrap;
+
+        .swiper-pagination-bullet
+        {
+            background: $btnColor;
+        }
+        .swiper-swipe {
+            width: 70%;
+            height: 85%;
+            display: flex;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            @include shadow();
+            border: 2px solid rgba(255, 255, 255, 0.116);
+            
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+            .sliderInfo {
+                position: absolute;
+                bottom: 4rem;
+                left: 1rem;
+                color: white;
+                background: $secBgColor;
+                min-width: 60%;
+                height: 4rem;
+                @include flex($jc: space-between);
+                padding: 0 1rem;
+                border-radius: 10px;
+
+                > a {
+                    background: #000;
+                    justify-content: flex-end;
+                    text-decoration: none;
+                    background: $btnColor;
+                    padding: 10px;
+                    border-radius: 5px;
+                    transition: .3s ease-in-out ;
+                    &:hover{
+                        background: $hoverBtnColor;
+                    }
+                }
+            }
+            .tag {
+                z-index: 2;
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                color: white;
+                width: 4rem;
+                height: 2.4rem;
+                display: flex;
+                align-items: center;
+                padding: 0 1rem;
+                border-radius: 5px;
+                background: $btnColor;
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+        }
+        .custom-list {
+            width: 25%;
+            height: 85%;
+            @include shadow();
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.116);
+
+        }
+    }
+    
+    .gamesContainer{
+        width: 100%;
+        min-height: 20vh;
+        border: 1px solid rgb(0, 38, 255);
+    }
 }
